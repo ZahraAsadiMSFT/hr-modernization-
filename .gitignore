@@ -77,7 +77,8 @@ Thumbs.db
 *.pfx
 
 # Application specific
-templates/
+templates/*
+!templates/README.md
 output/
 logs/
 *.log

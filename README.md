@@ -68,6 +68,34 @@ User Input → AI Classification → SQL Query → Document Generation → Cloud
    OPENAI_API_VERSION=2024-12-01-preview
    ```
 
+5. **Set up the database**
+   Run the provided SQL script to create sample data:
+   ```bash
+   # Connect to your Azure SQL Database and run:
+   # database_setup.sql
+   ```
+   This creates tables, sample employees (including duplicate names for testing), and required stored procedures.
+
+6. **Upload document templates**
+   See `templates/README.md` for instructions on creating and uploading Word and PDF templates to your Azure Blob Storage.
+
+## Quick Start
+
+### Test with Sample Data
+
+The easiest way to test the application:
+
+1. **Run database setup**: Execute `database_setup.sql` in your Azure SQL Database
+2. **Test the application**: 
+   ```bash
+   python app.py
+   ```
+3. **Try sample queries**:
+   - "Get paystub for Alex Martin from January 2022"
+   - "Generate T4 for Jordan Lee for 2023"
+
+The sample data includes duplicate employee names (Alex Martin) to test the disambiguation feature.
+
 ## Usage
 
 ### Interactive Mode
